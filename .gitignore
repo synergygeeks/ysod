@@ -1,0 +1,10 @@
+# Compiled output
+*.dll
+*.pdb
+
+# Strong-name key -- contains private key material, never commit
+*.snk
+
+# Build artifacts
+bin/
+obj/
