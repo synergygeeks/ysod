@@ -1,4 +1,4 @@
-# YsodGateModule
+# YSoD Gate Module
 
 IIS HTTP Module that gates full ASP.NET exception detail to trusted internal
 clients only. External clients see the app's configured friendly error page.
@@ -11,7 +11,7 @@ IIS's built-in error display modes only distinguish localhost vs everyone else.
 This module adds:
 
 - **Subnet-based decisions** -- CIDR matching against a configurable allow list
-- **X-Forwarded-For awareness** -- reads real client IP from behind HAProxy
+- **X-Forwarded-For awareness** -- reads real client IP from behind Proxy
 - **XFF trust validation** -- only trusts the header when the immediate peer
   is a known proxy, preventing spoofing
 
@@ -38,7 +38,7 @@ build.ps1               -- compiles YsodGateModule.cs using csc.exe
 <add key="InternalClientSubnets" value="10.0.0.0/8,172.16.0.0/12,192.168.0.0/16" />
 ```
 
-`TrustedProxies` -- exact IPv4 addresses of HAProxy nodes. Not CIDR.
+`TrustedProxies` -- exact IPv4 addresses of Proxy nodes. Not CIDR.
 `InternalClientSubnets` -- CIDR ranges whose users may see full error detail.
 
 ## Build
