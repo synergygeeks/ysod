@@ -39,7 +39,7 @@ Two appSettings entries:
 <add key="InternalClientSubnets" value="10.0.0.0/8,172.16.0.0/12,192.168.0.0/16" />
 ```
 
-`TrustedProxies` = HAProxy IPs (exact IPs, not CIDR).
+`TrustedProxies` = Proxy IPs (exact IPs, not CIDR).
 `InternalClientSubnets` = who sees full errors (CIDR ranges).
 
 ### 3. No per-app changes
@@ -48,7 +48,7 @@ The module runs server-wide. Individual apps are not modified.
 
 ## How it decides what to show
 
-1. Is the request coming through a known HAProxy? (checks immediate peer
+1. Is the request coming through a known Proxy? (checks immediate peer
    against TrustedProxies)
 2. What is the real client IP? (reads X-Forwarded-For, walks it safely)
 3. Is that client in an internal subnet? (checks against InternalClientSubnets)
