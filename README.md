@@ -24,8 +24,6 @@ src/
   YsodGateModule.cs     -- module source, all logic in one file
 poc/
   web.config            -- PoC site config (healthMonitoring + module registration)
-  Default.aspx          -- exception-triggering test page (button-driven)
-  Default.aspx.cs       -- code-behind for Default.aspx
   Throw.aspx            -- GET-triggered exception page for curl testing
   Error.aspx            -- friendly error page shown to external clients
 docs/
